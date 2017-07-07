@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <p class="panel-title"> <%= current_user.email %></p>
+  </div>
+
+  <div class="panel-body">
+
+     <%= simple_format resume.content %>
+
+    <hr>
+
+    <%= link_to("Download Resume", resume.attachment_url) %>
+  </div>
+</div>

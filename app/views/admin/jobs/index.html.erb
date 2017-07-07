@@ -9,7 +9,7 @@
   <thead>
       <tr>
           <th> Job </th>
-          <th> Description</th>
+          <th> Resume </th>
           <th> Time</th>
           <th> Opiton</th>
       </tr>
@@ -21,7 +21,7 @@
         <td>
              <%= render_job_status(job) %>
              <%= link_to(job.title, job_path(job)) %></td>
-        <td> <%= job.description %></td>
+        <td> <%= link_to job.resumes.count, admin_job_resumes_path(job) %></td>
         <td> <%= job.created_at %></td>
         <td>
           <%= link_to("Edit", edit_admin_job_path(job), class: "btn btn-sm btn-success") %>
