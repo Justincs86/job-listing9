@@ -1,5 +1,14 @@
-<div class="pull-right">
-    <%= link_to("Add a Job", new_job_path, class: "btn btn-default") %>
+<div class="dropdown pull-right">
+  <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    list
+    <b class="caret" %></b>
+  </div>
+    <ul class="dropdown-menu">
+      <li> <%= link_to("by_lower_bound", jobs_path(:order => "lower_wage_bound DESC ")) %></li>
+      <li> <%= link_to("by_upper_bound", jobs_path(:order => "lower_wage_bound DESC ")) %></li>
+      <li> <%= link_to("time", jobs_path) %></li>
+    </ul>
+
 </div>
 <br><br><br>
 
